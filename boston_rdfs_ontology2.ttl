@@ -3,9 +3,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://github.com/MarkusEibner/boston_celtics_ontology/blob/main/boston_rdfs_ontology2.ttl#> . 
 
-# Classes
-
-ex:Person a rdfs:Class .
 
 ex:BasketballPlayer a rdfs:Class ;
     rdfs:subClassOf ex:Person .
@@ -13,9 +10,6 @@ ex:BasketballPlayer a rdfs:Class ;
 ex:Team a rdfs:Class .
 
 # Properties
-ex:hasName a rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
 
 ex:hasTeam a rdf:Property ;
     rdfs:domain ex:BasketballPlayer ;
@@ -29,30 +23,4 @@ ex:hasPosition a rdf:Property ;
     rdfs:domain ex:BasketballPlayer ;
     rdfs:range xsd:string .
 
-ex:hasHeight a rdf:Property ;
-    rdfs:domain ex:BasketballPlayer ;
-    rdfs:range xsd:float .
 
-ex:hasWeight a rdf:Property ;
-    rdfs:domain ex:BasketballPlayer ;
-    rdfs:range xsd:float .
-
-ex:hasNationality a rdf:Property ;
-    rdfs:domain ex:BasketballPlayer ;
-    rdfs:range xsd:string .
-
-ex:hasAge a rdf:Property ;
-    rdfs:domain ex:BasketballPlayer ;
-    rdfs:range xsd:integer .
-
-ex:hasBirthdate a rdf:Property ;
-    rdfs:domain ex:BasketballPlayer ;
-    rdfs:range xsd:date .
-
-ex:hasExperience a rdf:Property ;
-    rdfs:domain ex:BasketballPlayer ;
-    rdfs:range xsd:integer .
-
-ex:hasBio a rdf:Property ;
-    rdfs:domain ex:BasketballPlayer ;
-    rdfs:range xsd:string .
