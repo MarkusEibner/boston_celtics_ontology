@@ -4,11 +4,11 @@
 @prefix ex: <https://github.com/MarkusEibner/boston_celtics_ontology/blob/main/boston_rdfs_ontology2.ttl#> . 
 
 # Classes
+
 ex:Person a rdfs:Class .
-ex:Athlete a rdfs:Class ;
-    rdfs:subClassOf ex:Person .
+
 ex:BasketballPlayer a rdfs:Class ;
-    rdfs:subClassOf ex:Athlete .
+    rdfs:subClassOf ex:Person .
 
 ex:Team a rdfs:Class .
 
@@ -56,20 +56,3 @@ ex:hasExperience a rdf:Property ;
 ex:hasBio a rdf:Property ;
     rdfs:domain ex:BasketballPlayer ;
     rdfs:range xsd:string .
-
-# Sample individual (Jaylen Brown)
-ex:JaylenBrown a ex:BasketballPlayer ;
-    ex:hasName "Jaylen Brown" ;
-    ex:hasTeam ex:BostonCeltics ;
-    ex:hasNumber 7 ;
-    ex:hasPosition "Guard-Forward" ;
-    ex:hasHeight 1.98 ;
-    ex:hasWeight 101 ;
-    ex:hasNationality "USA" ;
-    ex:hasAge 27 ;
-    ex:hasBirthdate "1996-10-24"^^xsd:date ;
-    ex:hasExperience 8 .
-
-# Declare Boston Celtics Team properly
-ex:BostonCeltics a ex:Team ;
-    ex:hasName "Boston Celtics" .
